@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Docker Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef4ff;
+            color: #172554;
+        }
+
+        nav {
+            padding: 22px;
+            background: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 35px 24px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: clamp(32px, 7vw, 52px);
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .card {
+            margin-top: 32px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px #17255412;
+        }
+
+        button {
+            padding: 14px 26px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 4px;
+        }
+
+        footer {
+            padding: 24px;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>Taran's DevOps Lab</nav>
+
+    <main>
+        <span class="badge">My first practice project</span>
+
+        <h1>Small website.<br>Big learning journey.</h1>
+
+        <p>
+            I am learning how to build a website with HTML,
+            CSS and Python, then run it inside Docker.
+        </p>
+
+        <div class="card">
+            <h2>Try my website</h2>
+            <p>Click the button to test the JavaScript.</p>
+
+            <button onclick="countClicks()">Click me</button>
+
+            <p id="result" aria-live="polite">Clicks: 0</p>
+        </div>
+    </main>
+
+    <footer>Built with HTML, CSS, JavaScript and Flask</footer>
+
+    <script>
+        let clicks = 0;
+
+        function countClicks() {
+            clicks = clicks + 1;
+
+            document.getElementById("result").textContent =
+                "Clicks: " + clicks;
+        }
+    </script>
+</body>
+</html>
